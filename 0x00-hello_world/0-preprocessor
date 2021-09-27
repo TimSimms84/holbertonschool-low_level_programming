@@ -1,4 +1,2 @@
 #include <stdio.h>
-/*This script runs a C file trhough the preprocess and save the results into another file*/
-
 gcc -E $CFILE -o c
