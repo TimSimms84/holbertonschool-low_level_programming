@@ -10,7 +10,9 @@ int main(void)
 {
 int ABC;
 for (ABC = 'a'; ABC <= 'z'; ABC++)
+{
 	putchar (ABC);
+}
 	putchar ('\n');
 return (0);
 }
