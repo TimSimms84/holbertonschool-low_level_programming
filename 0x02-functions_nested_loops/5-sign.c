@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _isalpha - entry point
+ * print_sign - entry point
  *
  * Description: Returns one if C is a letter, or 0 if not.
  * @n: character to check
