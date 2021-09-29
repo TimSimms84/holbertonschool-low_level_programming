@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_alphabet - entry point
+ * print_alphabet_x10 - entry point
  *
  * Description: Prints the alphabet with _putchar
  *
@@ -11,6 +11,7 @@ void print_alphabet_x10(void)
 {
 	char alpha;
 	int i;
+
 	for (i = 0; i <= 10; i++)
 	{
 	for (alpha = 'a'; alpha <= 'z' ; alpha++)
