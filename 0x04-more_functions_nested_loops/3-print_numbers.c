@@ -1,0 +1,22 @@
+#include "main.h"
+/**
+ * print_numbers - entry point
+ *
+ * Description: Prints numbers 0-9
+ *
+ *@c: variable to print
+ *
+ *
+ * Return: void
+ */
+
+void print_numbers(void)
+{
+	char c;
+
+	for (c = '0'; c <= '9'; c++)
+	{
+		_putchar(c);
+	}
+	_putchar('\n');
+}
