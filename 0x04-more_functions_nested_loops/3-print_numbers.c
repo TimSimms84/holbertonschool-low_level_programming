@@ -4,7 +4,6 @@
  *
  * Description: Prints numbers 0-9
  *
- *@c: variable to print
  *
  *
  * Return: void
