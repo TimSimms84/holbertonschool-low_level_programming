@@ -4,7 +4,7 @@
  *
  * Description: Prints a line based on variable n
  *
- * @i: compare to n
+ * @n:variable
  *
  * Return: void
  */
