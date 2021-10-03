@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * more_numbers - entry point
+ * print_line - entry point
  *
- * Description: Prints numbers 0-14 on 10 seperate lines
+ * Description: Prints a line based on variable n
  *
  * @i: compare to n
  *
@@ -13,12 +13,10 @@ void print_line(int n)
 {
 		int i;
 
-		i = n;
-
-		while (i > 0)
+		if (n > 0)
 		{
+			for (i = 0; i < n; i++)
 			_putchar('_');
-			i--;
 		}
 	_putchar('\n');
 	}
