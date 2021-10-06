@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _puts - Entry point
+ * puts2 - Entry point
  *
  * @str: Point to the string
  *
@@ -14,7 +14,7 @@
 void puts2(char *str)
 {
 
-	while (*str)
+	while (*str != '\0')
 	{
 		_putchar(*str);
 		str++;
