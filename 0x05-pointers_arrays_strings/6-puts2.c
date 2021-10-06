@@ -11,7 +11,7 @@
  * Return: length of string
  */
 
-void _puts(char *str)
+void puts2(char *str)
 {
 
 	while (*str)
