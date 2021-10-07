@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * print_array - Prints elements of an array of intergers followed by a new line
+ * print_array - Prints elements of an array of intergers followed by new line
  *
  * @a: String containing array
  * @n: Number of elements in array
