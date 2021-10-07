@@ -11,7 +11,7 @@
  * Return: void
  */
 
-void pint_array(int *a, int n)
+void print_array(int *a, int n)
 {
 	int i = 0;
 
@@ -23,5 +23,5 @@ void pint_array(int *a, int n)
 			printf("%d", a[i]);
 		i++;
 	}
-	_putchar('\n');
+	putchar('\n');
 }
