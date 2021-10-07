@@ -15,19 +15,20 @@ void rev_string(char *s)
 {
 
 	int i, j;
-	char r[100];
+	char r;
 
 	i = j = 0;
 	while (s[i] != '\0')
 	{
-		r[i] = s[i];
 		i++;
 	}
 	i--;
-	while (i >= 0)
+	while (i > j)
 	{
-		s[i] = r[j];
-		i--;
+		r = s[i];
+		s[i] = s[j];
+		s[j] = r;
 		j++;
+		i--;
 	}
 }
