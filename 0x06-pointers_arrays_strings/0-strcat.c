@@ -1,4 +1,4 @@
-#include "main.h"
+#include "holberton.h"
 #include "_strlen.c"
 
 
@@ -28,7 +28,7 @@ int i = _strlen(dest), j = 0;
  *
  */
 
-	while (dest[j])
+	while (dest[j] != '\0')
 	{
 		dest[i] = src[j];
 		i++;
