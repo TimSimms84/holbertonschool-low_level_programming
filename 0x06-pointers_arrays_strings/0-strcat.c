@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include "_strlen.c"
 
 
 /**
@@ -11,27 +11,35 @@
  */
 
 
+
 char *_strcat(char *dest, char *src)
 {
-int i = 0, j = 0;
 
 /*
- * get how long the dest string is
+ * use _strlen function to get length ofidest string
+ *
  *
  */
-	while (dest[i])
-	{
-		i++;
-	}
+
+int i = _strlen(dest), j = 0;
+
 /*
- * puts the src string at null byte of dest string
+ * concatenate strings
  *
  */
-	while ((dest[i]) == (src[j]))
+
+	while (dest[j])
 	{
+		dest[i] = src[j];
 		i++;
 		j++;
 	}
+	/*
+	 *
+	 * end on null byte
+	 *
+	 */
 
+	dest[i] = '\0';
 return (dest);
 }
