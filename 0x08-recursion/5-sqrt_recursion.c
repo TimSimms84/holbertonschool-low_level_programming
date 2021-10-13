@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * square_root - find the natural square root
+ * square_root - find the natural square root of a number
  * @i: number
  * @j: incrementor
  *
@@ -22,8 +22,6 @@ int square_root(int i, int j)
 	{
 		return (square_root(i + 1, j));
 	}
-
-
 }
 
 /**
