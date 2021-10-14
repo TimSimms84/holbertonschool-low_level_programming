@@ -20,7 +20,7 @@ char *cap_string(char *s)
 			if (s[i - 1] == sep[j] && (s[i] >= 'a' && s[i] <= 'z')) /**
 																	  * checks if element before is word seperator
 																	 */
-				s[i] -= ('a' - 'A'); /* capiatilzes if before seperator */
+				s[i] -= ('a' - 'A'); /* capiatilzes if after seperator */
 		i++;
 	}
 	return (s);
