@@ -18,9 +18,11 @@ int main(int argc, char  *argv[])
 {
 	int i, j, sum = 0;
 
-	if (argc == 1) /*if no arguments */
+	if (argc == 1)
+	{/*if no arguments */
 		printf("0\n");
 		return (0);
+	}
 	for (i = 1; i < argc; i++) /*loop to add arguements */
 	{
 		for (j = 0; argv[i][j]; j++) /*loop to check valid arguments */
