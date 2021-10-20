@@ -17,6 +17,9 @@ char *_strdup(char *str)
 	char *ptr;
 	unsigned int n, strlen = 0;
 
+	if (str == 0)
+		return (NULL);
+
 	while (str[strlen])
 	{
 		strlen++;
