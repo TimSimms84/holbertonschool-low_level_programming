@@ -11,12 +11,14 @@
  *
  */
 
-
 char *_strdup(char *str)
 {
 
 	char *ptr;
 	unsigned int n, strlen = 0;
+
+	if (STR == NULL)
+		return (NULL);
 
 	while (str[strlen])
 	{
@@ -29,8 +31,5 @@ char *_strdup(char *str)
 	{
 		ptr[n] = str[n];
 	}
-
-
-
 return (ptr);
 }
