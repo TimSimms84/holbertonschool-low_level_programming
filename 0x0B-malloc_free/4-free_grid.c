@@ -1,26 +1,19 @@
 #include <stdlib.h>
-#include "main.h"
+# include <stdio.h>
+# include "main.h"
+# include <string.h>
 /**
- * free_grid - malloc a grid of int values height * width in dimensions
- * @grid: a two dimensional array
- * @height: the number of rows of grid
- * Return: v
+ * free_grid - frees 2D grid space
+ * @grid: grid pointer
+ * @height: grid height
+ * Return: Null if width/height is neg or 0 or pointer
  */
+
 void free_grid(int **grid, int height)
 {
-	int row;
+	int i;
 
-
-	if (grid == NULL)
-		return;
-	if (height == 0)
-		return;
-
-	for (row = 0; row < height; row++)
-	{
-		free(grid[row]);
-	}
-
+	for (i = 0; i < height; i++)
+		free(grid[i]);
 	free(grid);
-return;
 }
