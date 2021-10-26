@@ -30,6 +30,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
     for (i = 0, j = 0; i < (s1Len + n); i++)
     {
+        if (n >= strlen(s2))
+            n = strlen(s2);
+        
         if (i < s1Len)
         {
             ptr[i] = s1[i];
@@ -40,7 +43,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
         }
 
     }
-
+    i++;
     ptr[i] = '\0';
     return (ptr);
 }
