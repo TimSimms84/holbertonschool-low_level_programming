@@ -16,15 +16,23 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *newdog;
+	struct dog *copy;
 
 	newdog = malloc(sizeof(dog_t));
 
 	if (newdog == NULL)
 		return (NULL);
 
+	copy = malloc(sizeof(dog_t));
+
+	if (copy == NULL)
+		return (NULL);
+
 	newdog->name = name;
 	newdog->age = age;
 	newdog->owner = owner;
+	copy->name = newdog->name;
+	copy->owner = newdog->owner;
 
 	return (newdog);
 }
