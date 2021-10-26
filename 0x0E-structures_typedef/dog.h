@@ -17,4 +17,4 @@ struct dog
 };
 
 
-#endif /* DOG_H */
+#endif
