@@ -30,7 +30,6 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (b[j - i] == '1')
 		{
-			/*if only passed a 1 */
 			if (i == 0)
 				decimal = decimal + 1;
 			else
