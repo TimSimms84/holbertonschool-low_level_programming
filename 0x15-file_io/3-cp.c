@@ -1,25 +1,5 @@
 #include "main.h"
 
-/**
- * buffermaker - makes a buffer
- * @file: file to make a buffer for
- * Return: buffer
- */
-
-char *buffermaker(char *file)
-{
-	char *buffer;
-
-	buffer = malloc(sizeof(char) * 1024);
-
-	if (buffer == NULL)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file);
-		exit(98);
-	}
-	return (buffer);
-
-}
 
 /**
  * closer - closes the file
@@ -69,10 +49,9 @@ int main(int argc, char *argv[])
 {
 
 	int fromfile, tofile, writefile;
-	char *buffer;
+	char buffer[1024];
 
 	argccheck(argc);
-	buffer = buffermaker(argv[2]);
 	fromfile = open(argv[1], O_RDONLY);
 	if (fromfile == -1)
 		dprintf(STDERR_FILENO, "Error can't read from file %s\n", argv[1]),
@@ -90,7 +69,6 @@ int main(int argc, char *argv[])
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]),
 			exit(99);
 	}
-	free(buffer);
 	closer(fromfile);
 	closer(tofile);
 
