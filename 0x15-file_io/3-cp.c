@@ -76,7 +76,7 @@ int main(int argc, char *argv[])
 	fromfile = open(argv[1], O_RDONLY);
 	if (fromfile == -1)
 		dprintf(STDERR_FILENO, "Error can't read from file %s\n", argv[1]),
-		exit(99);
+		exit(98);
 	tofile = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	while ((writefile = read(fromfile, buffer, 1024)) != 0)
 	{
