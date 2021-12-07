@@ -1,18 +1,18 @@
-##0x18. C - Doubly linked lists
+# 0x18. C - Doubly linked lists
 
-Resources
+## Resources
 Read or watch:
 
 What is a Doubly Linked List
 Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
-General
+## General
 What is a doubly linked list
 How to use doubly linked lists
 Start to look for the right source of information without too much help
-Requirements
-General
+## Requirements
+### General
 Allowed editors: vi, vim, emacs
 All your files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.8.5)
 All your files should end with a new line
@@ -26,7 +26,7 @@ The prototypes of all your functions should be included in your header file call
 Don’t forget to push your header file
 All your header files should be include guarded
 
-More Info
+## More Info
 Please use this data structure for this project:
 
 /**
@@ -46,7 +46,7 @@ typedef struct dlistint_s
 } dlistint_t;
 
 Tasks
-0. Print list
+## 0. Print list
 mandatory
 Write a function that prints all the elements of a dlistint_t list.
 
@@ -89,7 +89,7 @@ int main(void)
     return (EXIT_SUCCESS);
 }
 
-1. List length
+## 1. List length
 mandatory
 Write a function that returns the number of elements in a linked dlistint_t list.
 
@@ -130,7 +130,7 @@ int main(void)
     return (EXIT_SUCCESS);
 }
 
-2. Add node
+## 2. Add node
 mandatory
 Write a function that adds a new node at the beginning of a dlistint_t list.
 
@@ -164,7 +164,7 @@ int main(void)
     return (EXIT_SUCCESS);
 }
 
-3. Add node at the end
+## 3. Add node at the end
 mandatory
 Write a function that adds a new node at the end of a dlistint_t list.
 
@@ -198,7 +198,7 @@ int main(void)
     return (EXIT_SUCCESS);
 }
 
-4. Free list
+## 4. Free list
 mandatory
 Write a function that frees a dlistint_t list.
 
@@ -233,7 +233,7 @@ int main(void)
     return (EXIT_SUCCESS);
 }
 
-5. Get node at index
+## 5. Get node at index
 mandatory
 Write a function that returns the nth node of a dlistint_t linked list.
 
@@ -273,7 +273,7 @@ int main(void)
     return (EXIT_SUCCESS);
 }
 
-6. Sum list
+## 6. Sum list
 mandatory
 Write a function that returns the sum of all the data (n) of a dlistint_t linked list.
 
@@ -312,7 +312,7 @@ int main(void)
     return (EXIT_SUCCESS);
 }
 
-7. Print list backward
+## 7. Print list backward
 mandatory
 Write a function that prints all the elements of a dlistint_t list backward.
 
@@ -355,7 +355,7 @@ int main(void)
     return (EXIT_SUCCESS);
 }
 
-8. Delete at index
+## 8. Delete at index
 mandatory
 Write a function that deletes the node at index index of a dlistint_t linked list.
 
