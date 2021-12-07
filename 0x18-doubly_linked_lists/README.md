@@ -29,6 +29,8 @@ All your header files should be include guarded
 ## More Info
 Please use this data structure for this project:
 
+```
+
 /**
  * struct dlistint_s - doubly linked list
  * @n: integer
@@ -44,6 +46,7 @@ typedef struct dlistint_s
     struct dlistint_s *prev;
     struct dlistint_s *next;
 } dlistint_t;
+```
 
 Tasks
 ## 0. Print list
@@ -53,6 +56,7 @@ Write a function that prints all the elements of a dlistint_t list.
 Prototype: size_t print_dlistint(const dlistint_t *h);
 Return: the number of nodes
 Format: see example
+```
 julien@ubuntu:~/0x17. Doubly linked lists$ cat 0-main.c 
 #include <stdlib.h>
 #include <string.h>
@@ -88,12 +92,15 @@ int main(void)
     free(new);
     return (EXIT_SUCCESS);
 }
+```
 
 ## 1. List length
 mandatory
 Write a function that returns the number of elements in a linked dlistint_t list.
 
 Prototype: size_t dlistint_len(const dlistint_t *h);
+
+```
 julien@ubuntu:~/0x17. Doubly linked lists$ cat 1-main.c 
 #include <stdlib.h>
 #include <string.h>
@@ -129,6 +136,7 @@ int main(void)
     free(new);
     return (EXIT_SUCCESS);
 }
+```
 
 ## 2. Add node
 mandatory
@@ -136,6 +144,7 @@ Write a function that adds a new node at the beginning of a dlistint_t list.
 
 Prototype: dlistint_t *add_dnodeint(dlistint_t **head, const int n);
 Return: the address of the new element, or NULL if it failed
+```
 julien@ubuntu:~/0x17. Doubly linked lists$ cat 2-main.c 
 #include <stdlib.h>
 #include <string.h>
@@ -163,6 +172,7 @@ int main(void)
     print_dlistint(head);
     return (EXIT_SUCCESS);
 }
+```
 
 ## 3. Add node at the end
 mandatory
@@ -170,6 +180,7 @@ Write a function that adds a new node at the end of a dlistint_t list.
 
 Prototype: dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);
 Return: the address of the new element, or NULL if it failed
+```
 julien@ubuntu:~/0x17. Doubly linked lists$ cat 3-main.c 
 #include <stdlib.h>
 #include <string.h>
@@ -197,12 +208,14 @@ int main(void)
     print_dlistint(head);
     return (EXIT_SUCCESS);
 }
+```
 
 ## 4. Free list
 mandatory
 Write a function that frees a dlistint_t list.
 
 Prototype: void free_dlistint(dlistint_t *head);
+```
 julien@ubuntu:~/0x17. Doubly linked lists$ cat 4-main.c
 #include <stdlib.h>
 #include <string.h>
@@ -232,6 +245,7 @@ int main(void)
     head = NULL;
     return (EXIT_SUCCESS);
 }
+```
 
 ## 5. Get node at index
 mandatory
@@ -240,6 +254,7 @@ Write a function that returns the nth node of a dlistint_t linked list.
 Prototype: dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index);
 where index is the index of the node, starting from 0
 if the node does not exist, return NULL
+```
 julien@ubuntu:~/0x17. Doubly linked lists$ cat 5-main.c
 #include <stdlib.h>
 #include <string.h>
@@ -272,6 +287,7 @@ int main(void)
     head = NULL;
     return (EXIT_SUCCESS);
 }
+```
 
 ## 6. Sum list
 mandatory
@@ -279,7 +295,7 @@ Write a function that returns the sum of all the data (n) of a dlistint_t linked
 
 Prototype: int sum_dlistint(dlistint_t *head);
 if the list is empty, return 0
-
+```
 julien@ubuntu:~/0x17. Doubly linked lists$ cat 6-main.c 
 #include <stdlib.h>
 #include <string.h>
@@ -311,6 +327,7 @@ int main(void)
     head = NULL;
     return (EXIT_SUCCESS);
 }
+```
 
 ## 7. Print list backward
 mandatory
@@ -319,6 +336,7 @@ Write a function that prints all the elements of a dlistint_t list backward.
 Prototype: size_t print_dlistint_backward(const dlistint_t *h);
 Return: the number of nodes
 Format: see example
+```
 lisa@ubuntu:~/0x17. Doubly linked lists$ cat 9-main.c 
 #include <stdlib.h>
 #include <string.h>
@@ -354,6 +372,7 @@ int main(void)
     free(new);
     return (EXIT_SUCCESS);
 }
+```
 
 ## 8. Delete at index
 mandatory
@@ -362,6 +381,7 @@ Write a function that deletes the node at index index of a dlistint_t linked lis
 Prototype: int delete_dnodeint_at_index(dlistint_t **head, unsigned int index);
 where index is the index of the node that should be deleted. Index starts at 0
 Returns: 1 if it succeeded, -1 if it failed
+```
 julien@ubuntu:~/0x17. Doubly linked lists$ cat 8-main.c
 #include <stdlib.h>
 #include <string.h>
@@ -431,3 +451,4 @@ int main(void)
     print_dlistint(head);
     return (0);
 }
+```
