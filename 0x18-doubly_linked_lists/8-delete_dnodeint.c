@@ -43,6 +43,16 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	if (nodeexist(temp, index) != 0)
 		return (-1);
 
+	if (!index)
+	{
+		(*head) = temp->next;
+		if (temp->next)
+			temp->next->prev = NULL;
+		temp->next = NULL;
+		free(temp);
+		return (1);
+	}
+
 	while (temp && i < index)
 	{
 		temp = temp->next;
