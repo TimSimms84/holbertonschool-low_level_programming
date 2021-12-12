@@ -24,7 +24,7 @@ void hash_table_print(const hash_table_t *ht)
 		{
 			if (flag == 0)
 				printf(", ");
-			printf("%s': '%s", search->key, search->value);
+			printf("'%s': '%s'", search->key, search->value);
 			flag = 0;
 			search = search->next;
 		}
