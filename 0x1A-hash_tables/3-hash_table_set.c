@@ -13,7 +13,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *search, *new_node = NULL;
 	unsigned long int index;
-	char * new_value;
 
 	if (!ht || !key || !value)
 		return (0);
@@ -26,11 +25,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		if (strcmp(search->key, key) == 0)
 		{
-			new_value = strdup(value);
-			if (new_value == NULL)
-				return (0);
-			free(search->value);
-			search->value = new_value;
+			search->value = strdup(value);
 			return (1);
 		}
 		search = search->next;
