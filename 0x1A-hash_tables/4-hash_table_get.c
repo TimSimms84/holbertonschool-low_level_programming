@@ -14,7 +14,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 
 	if (ht->array == NULL || ht->size == 0 || strlen(key) == 0)
 		return (NULL);
-	if (index >= ht->size)
+	if (index >= ht->size || ht == NULL)
 		return (NULL);
 
 	if (key && ht)
