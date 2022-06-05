@@ -13,6 +13,10 @@ int _atoi(char *s)
 
 	while (*temp)
 	{
+		if (*temp >= '0' && *temp <= '9')
+		{
+			break;
+		}
 		if (*temp == '-')
 		{
 			++flag;
