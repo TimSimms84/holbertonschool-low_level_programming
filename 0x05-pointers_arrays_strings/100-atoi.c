@@ -1,15 +1,14 @@
+#include "main.h"
 /**
  * _atoi - convert string to int
  * @s: passed string
  * Return: value of string
  */
-
 int _atoi(char *s)
 {
 	int res = 0;
 	int i = 0;
 	int flag = 0;
-
 
 	for (i; s[i] != '\0'; ++i)
 	{
