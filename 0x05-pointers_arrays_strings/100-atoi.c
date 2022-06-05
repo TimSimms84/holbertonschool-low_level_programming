@@ -8,23 +8,18 @@
 int _atoi(char *s)
 {
 	int res = 0;
-	int i = 0;
+	char *temp = s;
 	int flag = 0;
+	int i = 0;
 
-	for  (; s[i] != '\0'; ++i)
+	while (*temp)
 	{
-		if (s[i] >= '0' && s[i] <= '9')
-		{
-			res = res * 10 + s[i] - '0';
-		}
-		if (s[i] == '-')
+		if (*temp == '-')
 		{
 			++flag;
+			i = 1;
 		}
-		if ((s[i] < '0' || s[i] > '9') && res != 0)
-		{
-			break;
-		}
+		++temp;
 	}
 
 	if (flag % 2 == 0)
@@ -32,5 +27,16 @@ int _atoi(char *s)
 	else
 		flag = -1;
 
-	return (res * flag);
+	for (; s[i]; ++i)
+	{
+		if (s[i] >= '0' && s[i] <= '9')
+		{
+			res = res * 10 + ((s[i] - '0') * flag);
+		}
+		if (s[i] < '0' || s[i] > '9')
+		{
+			break;
+		}
+	}
+	return (res);
 }
