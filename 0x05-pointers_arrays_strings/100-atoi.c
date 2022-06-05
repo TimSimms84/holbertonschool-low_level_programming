@@ -17,7 +17,10 @@ int _atoi(char *s)
 		if (*temp == '-')
 		{
 			++flag;
-			i = 1;
+		}
+		if (*temp < '0' || *temp > '9')
+		{
+			++i;
 		}
 		++temp;
 	}
