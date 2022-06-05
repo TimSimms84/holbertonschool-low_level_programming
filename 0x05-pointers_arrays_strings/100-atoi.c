@@ -10,17 +10,12 @@ int _atoi(char *s)
 	int res = 0;
 	char *temp = s;
 	int flag = 0;
-	int i = 0;
 
 	while (*temp)
 	{
 		if (*temp == '-')
 		{
 			++flag;
-		}
-		if (*temp < '0' || *temp > '9')
-		{
-			++i;
 		}
 		++temp;
 	}
@@ -30,16 +25,17 @@ int _atoi(char *s)
 	else
 		flag = -1;
 
-	for (; s[i]; ++i)
+	while (*s)
 	{
-		if (s[i] >= '0' && s[i] <= '9')
+		if (*s >= '0' && *s <= '9')
 		{
-			res = res * 10 + ((s[i] - '0') * flag);
+			res = res * 10 + ((*s- '0') * flag);
 		}
-		if (s[i] < '0' || s[i] > '9')
+		if ((*s < '0' || *s > '9') && res != 0)
 		{
 			break;
 		}
+		++s;
 	}
 	return (res);
 }
