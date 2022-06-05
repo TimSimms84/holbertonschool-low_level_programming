@@ -33,7 +33,7 @@ int _atoi(char *s)
 	{
 		if (*s >= '0' && *s <= '9')
 		{
-			res = res * 10 + ((*s- '0') * flag);
+			res = res * 10 + ((*s - '0') * flag);
 		}
 		if ((*s < '0' || *s > '9') && res != 0)
 		{
