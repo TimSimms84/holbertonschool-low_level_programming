@@ -1,30 +1,37 @@
-#include <stddef.h>
-
+#include "main.h"
+#include <stdio.h>
 /**
- * _strstr - stuff
- * @hak: stufff
- * @ned: stuff
- * Return: always
+ * _strstr - finds the first occurrence of the substring needle in haystack
+ * @haystack : string
+ * @needle : string
+ * Return:  a pointer to the beginning of the located substring,
  */
 
-char *_strstr(char *hak, char *ned)
+char *_strstr(char *haystack, char *needle)
 {
-	unsigned int i = 0;
-	int x;
+	int i = 0, j;
 
-	while (hak[i] != '\0')
+	while (haystack[i])
 	{
-		if (hak[i] == ned[0])
+		j = 0;
+
+		while (needle[j])
 		{
-			for (x = 0; ned[x] != '\0'; x++)
+			if (haystack[i + j] != needle[j])
 			{
-				if (hak[i + x] != ned[x])
 				break;
 			}
-			if (hak[i + x] == ned[x])
-				return (&hak[i]);
+
+			j++;
 		}
+
+		if (needle[j] == '\0')
+		{
+			return (haystack + i);
+		}
+
 		i++;
 	}
-	return (&hak[i]);
+
+	return ('\0');
 }
