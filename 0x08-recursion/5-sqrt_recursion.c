@@ -14,14 +14,12 @@ int square_root(int i, int j)
 	{
 		return (i);
 	}
-	else if (i * i > j)
+	if (i * i > j)
 	{
 		return (-1);
 	}
-	else
-	{
-		return (square_root(i + 1, j));
-	}
+	return (square_root(i + 1, j));
+
 }
 
 /**
