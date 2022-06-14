@@ -38,7 +38,7 @@ int binary_search(int *array, size_t size, int value)
 	left = 0, right = size - 1;
 
 	arrayPrinter(temp, (int)left, (int)right);
-	while (left < right)
+	while (left <= right)
 	{
 		mid = (left + right) / 2;
 		if (value == temp[mid])
