@@ -28,7 +28,7 @@ void arrayPrinter(int *array, int start, int end)
 
 int binary_search(int *array, size_t size, int value)
 {
-	size_t i = 0, mid, left, right;
+	size_t mid, left, right;
 	int *temp = array;
 
 
