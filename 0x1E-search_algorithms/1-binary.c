@@ -43,11 +43,12 @@ int binary_search(int *array, size_t size, int value)
 		mid = (left + right) / 2;
 		if (value == temp[mid])
 			return (mid);
-		else if (value < temp[mid])
-			right = mid - 1;
-		else
+		else if (value > temp[mid])
 			left = mid + 1;
-		arrayPrinter(temp, (int)left, (int)right);
+		else
+			right = mid - 1;
+		if (left <= right)
+			arrayPrinter(temp, (int)left, (int)right);
 	}
 	return (-1);
 }
