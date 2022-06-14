@@ -28,27 +28,26 @@ void arrayPrinter(int *array, int start, int end)
 
 int binary_search(int *array, size_t size, int value)
 {
-	size_t mid, left, right;
+	int mid, left, right;
 	int *temp = array;
-
 
 	if (!array)
 		return (-1);
 
-	left = 0, right = size - 1;
+	left = 0, right = ((int)size - 1);
 
-	arrayPrinter(temp, (int)left, (int)right);
+	arrayPrinter(temp, left, right);
 	while (left <= right)
 	{
 		mid = (left + right) / 2;
 		if (value == temp[mid])
 			return (mid);
-		else if (value > temp[mid])
+		if (value > temp[mid])
 			left = mid + 1;
-		else
+		if (value < temp[mid])
 			right = mid - 1;
 		if (left <= right)
-			arrayPrinter(temp, (int)left, (int)right);
+			arrayPrinter(temp, left, right);
 	}
 	return (-1);
 }
