@@ -23,31 +23,33 @@ void arrayPrinter(int *array, int start, int end)
  * @array: the array
  * @size: size of the array
  * @value: what to find
- * Return: index where it is
+ * Return: index where it is or -1 if not present
  */
 
 int binary_search(int *array, size_t size, int value)
 {
-	int mid, left, right;
+	int mid, left, right, RETURN_VALUE = -1;
 	int *temp = array;
 
-	if (!array)
-		return (-1);
-
-	left = 0, right = ((int)size - 1);
-
-	arrayPrinter(temp, left, right);
-	while (left <= right)
+	if (array)
 	{
-		mid = (left + right) / 2;
-		if (value == temp[mid])
-			return (mid);
-		if (value > temp[mid])
-			left = mid + 1;
-		if (value < temp[mid])
-			right = mid - 1;
-		if (left <= right)
-			arrayPrinter(temp, left, right);
+		left = 0, right = ((int)size - 1);
+		arrayPrinter(temp, left, right);
+		while (left <= right)
+		{
+			mid = (left + right) / 2;
+			if (value == temp[mid])
+				{
+				RETURN_VALUE = mid;
+				break;
+				}
+			if (value > temp[mid])
+				left = mid + 1;
+			if (value < temp[mid])
+				right = mid - 1;
+			if (left <= right)
+				arrayPrinter(temp, left, right);
+		}
 	}
-	return (-1);
+	return (RETURN_VALUE);
 }
