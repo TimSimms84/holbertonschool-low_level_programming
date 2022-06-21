@@ -8,7 +8,7 @@
  */
 void arrayPrinter(int *array, int start, int end)
 {
-	size_t i;
+	int i;
 
 	printf("Searching in array: ");
 	for (i = start; i < end; i++)
@@ -29,7 +29,7 @@ void arrayPrinter(int *array, int start, int end)
 int recursive_binary(int *arr, int value, size_t left, size_t right,
 ssize_t *found)
 {
-	size_t i = left, mid;
+	size_t mid;
 
 	if (left > right)
 		return (*found);
