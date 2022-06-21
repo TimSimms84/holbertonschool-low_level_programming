@@ -42,10 +42,10 @@ ssize_t *found)
 			mid++;
 	}
 	if (arr[mid] < value)
-		return (recursive_binary(arr, value, mid + 1, right, found));
-	if (arr[mid] > value)
-		return (recursive_binary(arr, value, left, mid - 1, found));
-	return (*found);
+        return (recursive_binary(arr, value, mid + 1, right, found));
+    if (arr[mid] > value)
+        return (recursive_binary(arr, value, left, mid, found));
+    return (*found);
 }
 
 /**
