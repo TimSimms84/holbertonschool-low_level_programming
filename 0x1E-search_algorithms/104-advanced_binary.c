@@ -29,23 +29,27 @@ void arrayPrinter(int *array, int start, int end)
 int recursive_binary(int *arr, int value, size_t left, size_t right,
 ssize_t *found)
 {
-	size_t mid;
+	size_t mid = left + (right - left) / 2;
 
 	if (left > right)
 		return (*found);
+	if (left == right)
+	{
+		if (arr[mid] == value)
+		*found = mid;
+		return (*found);
+	}
 	arrayPrinter(arr, left, right);
-	mid = ((right - left) / 2) + left;
 	if (arr[mid] == value)
 	{
 		*found = mid;
-		if (right - left > 1)
-			mid++;
-	}
-	if (arr[mid] < value)
-		return (recursive_binary(arr, value, mid + 1, right, found));
-	if ((arr[mid] > value) || (arr[mid] == value && arr[mid - 1] == value))
 		return (recursive_binary(arr, value, left, mid, found));
-	return (*found);
+	}
+	if (arr[mid] > value)
+	{
+		return (recursive_binary(arr, value, mid, right, found));
+	}
+	return (recursive_binary(arr, value, mid + 1, right, found));
 }
 
 /**
