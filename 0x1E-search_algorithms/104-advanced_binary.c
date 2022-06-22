@@ -31,7 +31,7 @@ ssize_t *found)
 {
 	size_t mid;
 
-	if (left >= right)
+	if (left > right)
 		return (*found);
 	arrayPrinter(arr, left, right);
 	mid = ((right - left) / 2) + left;
@@ -43,7 +43,7 @@ ssize_t *found)
 	}
 	if (arr[mid] < value)
 		return (recursive_binary(arr, value, mid + 1, right, found));
-	if (arr[mid] >= value)
+	if ((arr[mid] > value) || (arr[mid] == value && arr[mid - 1] == value))
 		return (recursive_binary(arr, value, left, mid, found));
 	return (*found);
 }
