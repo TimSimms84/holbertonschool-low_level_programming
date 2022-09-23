@@ -9,13 +9,12 @@
 
 void print_number(int n)
 {
-	unsigned int length = 0, modulo = 1;
+	unsigned int modulo = 1;
 
 	if (n < 0)
 	{
 		_putchar('-');
 		n = n * -1;
-		length++;
 	}
 	while ((n / modulo) >= 10)
 	{
@@ -26,6 +25,5 @@ void print_number(int n)
 		_putchar((n / modulo) + '0');
 		n = n % modulo;
 		modulo = modulo / 10;
-		length++;
 	}
 }
