@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 /**
  * _strchr - checks if a char is in string
  *
@@ -21,5 +22,5 @@ char *_strchr(char *s, char c)
 		s++;
 	}
 
-return (s + 1);  /* return null byte if c not found */
+	return (NULL);
 }
